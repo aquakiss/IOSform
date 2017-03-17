@@ -50,7 +50,7 @@
         <!--Form creator-->
         <scene sceneID="QF3-YH-nIz">
             <objects>
-                <tableViewController id="naD-tE-X8Y" sceneMemberID="viewController">
+                <tableViewController id="naD-tE-X8Y" customClass="CreatorForm_TableViewController" customModule="DynamiqueForm" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bri-7Y-BE8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,7 +90,6 @@
                     <tabBarItem key="tabBarItem" title="Item" id="dJ2-J8-c9J"/>
                     <toolbarItems>
                         <barButtonItem title="Item" id="TOI-N8-z52"/>
-                        <barButtonItem title="Item" id="fXv-ka-KGj"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Form creator" id="5ip-iz-evm">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="LZk-e8-xJb">

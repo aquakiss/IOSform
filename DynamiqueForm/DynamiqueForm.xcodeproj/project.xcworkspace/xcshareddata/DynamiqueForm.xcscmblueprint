@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "79C77A0B1DB1AF45C10A2E9EDCFB57216B754AC3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "79C77A0B1DB1AF45C10A2E9EDCFB57216B754AC3" : 9223372036854775807,
+    "C385A465BD2AC1651EDFC8B6074A53DB776C0550" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "355708DC-BBE7-49D1-90C1-08FBCFC3DB02",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "79C77A0B1DB1AF45C10A2E9EDCFB57216B754AC3" : "DynamiqueForm\/",
+    "C385A465BD2AC1651EDFC8B6074A53DB776C0550" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DynamiqueForm",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DynamiqueForm.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/aquakiss\/IOsForm.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "79C77A0B1DB1AF45C10A2E9EDCFB57216B754AC3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/aquakiss\/IOsForm.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C385A465BD2AC1651EDFC8B6074A53DB776C0550"
+    }
+  ]
+}
