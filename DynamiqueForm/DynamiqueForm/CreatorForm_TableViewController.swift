@@ -9,7 +9,7 @@
 import UIKit
 
 class CreatorForm_TableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,27 +26,35 @@ class CreatorForm_TableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    var arrayCell: [Int: PrototypeTableViewCell] = [:]
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return arrayCell.count
     }
 
-    /*
+    
+    @IBAction func insertItem(_ sender: AnyObject) {
+        tableView.beginUpdates()
+        let cell = PrototypeTableViewCell()
+        arrayCell[arrayCell.count+1] = cell
+        tableView.insertRows(at: [IndexPath(row: arrayCell.count-1, section: 0)], with: .automatic)
+        tableView.endUpdates()
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCell", for: indexPath) as! PrototypeTableViewCell
 
-        // Configure the cell...
+        cell.fieldText.placeholder = "Nom du champs"
 
         return cell
     }
-    */
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

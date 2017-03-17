@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B40B8661E7C217F00F830F6 /* PrototypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B40B8651E7C217F00F830F6 /* PrototypeTableViewCell.swift */; };
 		8BB521311E7BE04D00E2D9C0 /* CreatorForm_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB521301E7BE04D00E2D9C0 /* CreatorForm_TableViewController.swift */; };
 		8BFEE6121E7ACCDB00259EFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFEE6111E7ACCDB00259EFE /* AppDelegate.swift */; };
 		8BFEE6141E7ACCDB00259EFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFEE6131E7ACCDB00259EFE /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B40B8651E7C217F00F830F6 /* PrototypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrototypeTableViewCell.swift; sourceTree = "<group>"; };
 		8BB521301E7BE04D00E2D9C0 /* CreatorForm_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorForm_TableViewController.swift; sourceTree = "<group>"; };
 		8BFEE60E1E7ACCDA00259EFE /* DynamiqueForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamiqueForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFEE6111E7ACCDB00259EFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				8BFEE6131E7ACCDB00259EFE /* ViewController.swift */,
 				8BFEE6151E7ACCDB00259EFE /* Main.storyboard */,
 				8BB521301E7BE04D00E2D9C0 /* CreatorForm_TableViewController.swift */,
+				8B40B8651E7C217F00F830F6 /* PrototypeTableViewCell.swift */,
 				8BFEE61B1E7ACCDB00259EFE /* Assets.xcassets */,
 				8BFEE61D1E7ACCDB00259EFE /* LaunchScreen.storyboard */,
 				8BFEE6201E7ACCDB00259EFE /* Info.plist */,
@@ -146,6 +149,7 @@
 				8BFEE6121E7ACCDB00259EFE /* AppDelegate.swift in Sources */,
 				8BB521311E7BE04D00E2D9C0 /* CreatorForm_TableViewController.swift in Sources */,
 				8BFEE61A1E7ACCDB00259EFE /* DynamiqueForm.xcdatamodeld in Sources */,
+				8B40B8661E7C217F00F830F6 /* PrototypeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
