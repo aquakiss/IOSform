@@ -50,8 +50,6 @@ class CreatorForm_TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCell", for: indexPath) as! PrototypeTableViewCell
 
-        cell.fieldText.placeholder = "Nom du champs"
-
         return cell
     }
     
