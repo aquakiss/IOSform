@@ -53,6 +53,18 @@ class CreatorForm_TableViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func Savethisform(_ sender: AnyObject) {
+        for (cellkey , cellvalu) in arrayCell {
+            print("\(cellkey): \(cellvalu)")
+        }
+        
+        let alertController = UIAlertController(title: "Message", message: " \(arrayCell.count):", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Exit", style: .cancel){
+            _ in print("exit pop up")
+        }
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

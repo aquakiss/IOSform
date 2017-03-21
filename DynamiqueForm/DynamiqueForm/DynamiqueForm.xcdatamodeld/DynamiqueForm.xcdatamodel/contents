@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1004" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Cell" syncable="YES"/>
+    <entity name="Entity" syncable="YES"/>
+    <entity name="Entity2" parentEntity="Entity" syncable="YES"/>
+    <entity name="Form" parentEntity="Entity" syncable="YES">
+        <attribute name="attribute1" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attribute2" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cell" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Form" positionX="-396" positionY="-234" width="128" height="103"/>
+        <element name="Cell" positionX="-54" positionY="-9" width="128" height="43"/>
+        <element name="Entity" positionX="-396" positionY="-385" width="128" height="43"/>
+        <element name="Entity2" positionX="-146" positionY="-261" width="128" height="43"/>
+    </elements>
 </model>
