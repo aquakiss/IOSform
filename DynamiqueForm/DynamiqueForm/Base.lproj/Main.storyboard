@@ -120,23 +120,33 @@
             </objects>
             <point key="canvasLocation" x="933.60000000000002" y="122.78860569715144"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Form Table Controller-->
         <scene sceneID="7uw-pw-5ty">
             <objects>
-                <tableViewController id="lhR-5h-8aa" sceneMemberID="viewController">
+                <tableViewController id="lhR-5h-8aa" customClass="FormTableController" customModule="DynamiqueForm" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="e99-py-A61">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wYd-Wn-TYN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicViewCell" textLabel="C49-8K-rH7" style="IBUITableViewCellStyleDefault" id="wYd-Wn-TYN" customClass="basicViewCell" customModule="DynamiqueForm" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wYd-Wn-TYN" id="GDi-YL-CzB">
                                     <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C49-8K-rH7">
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="title" destination="C49-8K-rH7" id="QSM-Lp-6H9"/>
                                     <segue destination="As1-eU-jb7" kind="show" id="m73-1N-NRf"/>
                                 </connections>
                             </tableViewCell>

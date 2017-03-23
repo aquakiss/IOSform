@@ -1,16 +1,18 @@
 //
-//  CreatorForm_TableViewController.swift
+//  FormTableController.swift
 //  DynamiqueForm
 //
-//  Created by Developer on 17/03/2017.
+//  Created by Developer on 23/03/2017.
 //  Copyright © 2017 Developer. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class CreatorForm_TableViewController: UITableViewController {
-    
+class FormTableController: UITableViewController {
+
+    var arrayCell: [Int : UITableViewCell] = [:]
+    var forms = [Form]()
     let appDel = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
@@ -22,15 +24,22 @@ class CreatorForm_TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        let context = appDel.persistentContainer.viewContext
+        
+        
+        let fetchRequest: NSFetchRequest<Form> = Form.fetchRequest()
+        forms = try! context.fetch(fetchRequest)
+        for index in 0...arrayCell.count {
+            arrayCell[index] = basicViewCell()
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
-    var arrayCell: [Int : PrototypeTableViewCell] = [:]
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -39,49 +48,18 @@ class CreatorForm_TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return arrayCell.count
+        return forms.count
     }
 
-    
-    @IBAction func insertItem(_ sender: AnyObject) {
-        tableView.beginUpdates()
-        arrayCell[arrayCell.count+1] = PrototypeTableViewCell();
-        tableView.insertRows(at: [IndexPath(row: arrayCell.count-1, section: 0)], with: .automatic)
-        tableView.endUpdates()
-    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCell", for: indexPath) as! PrototypeTableViewCell
-        arrayCell[arrayCell.count] = cell;
+        let cell = tableView.dequeueReusableCell(withIdentifier: "basicViewCell", for: indexPath) as! basicViewCell
         
+        cell.title.text = forms[indexPath.row].nom
+        print(indexPath.row)
+
         return cell
     }
-    
-    @IBAction func Savethisform(_ sender: AnyObject) {
-        print("---------------------------------------------------------------------------------")
-        
-        let context = appDel.persistentContainer.viewContext
-        
-        let form = Form(context: context)
-        form.nom = "FormulaireTest"
-        for (cellkey ,cellvalu) in arrayCell {
-           
-                let champ = Champ(context: context)
-                print(" \(cellkey) : \(cellvalu.fieldText.text)")
-                champ.label = cellvalu.fieldText.text
-                champ.formC = form
-                champ.value = ""
-        }
-        print("---------------------------------------------------------------------------------")
-        try? context.save()
-        
-        let alertController = UIAlertController(title: "Message", message: " \(arrayCell.count):", preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Exit", style: .cancel){
-            _ in print("exit pop up")
-        }
-        alertController.addAction(cancelAction)
-        present(alertController, animated: true, completion: nil)
-    }
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
