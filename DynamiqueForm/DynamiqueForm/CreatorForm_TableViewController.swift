@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CreatorForm_TableViewController: UITableViewController {
     
@@ -56,9 +57,13 @@ class CreatorForm_TableViewController: UITableViewController {
     }
     
     @IBAction func Savethisform(_ sender: AnyObject) {
+        print("---------------------------------------------------------------------------------")
         for (cellkey , cellvalu) in arrayCell {
-            print("\(cellkey): \(cellvalu)")
+            if(cellvalu.fieldText.text != nil){
+                print("\(cellkey): \(cellvalu.fieldText.text)")
+            }
         }
+        print("---------------------------------------------------------------------------------")
         
         let alertController = UIAlertController(title: "Message", message: " \(arrayCell.count):", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Exit", style: .cancel){
