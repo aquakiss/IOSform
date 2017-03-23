@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1004" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Champ" syncable="YES">
         <attribute name="form" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="idChamp" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="formC" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Form" inverseName="champF" inverseEntity="Form" syncable="YES"/>
-        <relationship name="typeC" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Type" inverseName="typeT" inverseEntity="Type" syncable="YES"/>
+        <relationship name="typeC" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Type" inverseName="typeT" inverseEntity="Type" syncable="YES"/>
     </entity>
-    <entity name="Form" parentEntity="Type" syncable="YES">
+    <entity name="Form" syncable="YES">
         <attribute name="idForm" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="champF" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Champ" inverseName="formC" inverseEntity="Champ" syncable="YES"/>
@@ -16,11 +16,11 @@
     <entity name="Type" syncable="YES">
         <attribute name="idType" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="typeT" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Champ" inverseName="typeC" inverseEntity="Champ" syncable="YES"/>
+        <relationship name="typeT" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Champ" inverseName="typeC" inverseEntity="Champ" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Champ" positionX="-54" positionY="-9" width="128" height="135"/>
-        <element name="Form" positionX="-396" positionY="-234" width="128" height="90"/>
-        <element name="Type" positionX="-396" positionY="-385" width="128" height="90"/>
+        <element name="Champ" positionX="-279" positionY="-270" width="128" height="133"/>
+        <element name="Form" positionX="-452" positionY="-270" width="128" height="88"/>
+        <element name="Type" positionX="-117" positionY="-270" width="128" height="88"/>
     </elements>
 </model>
