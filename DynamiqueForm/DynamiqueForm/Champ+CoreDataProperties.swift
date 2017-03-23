@@ -15,7 +15,6 @@ extension Champ {
         return NSFetchRequest<Champ>(entityName: "Champ");
     }
 
-    @NSManaged public var form: Int32
     @NSManaged public var idChamp: NSData?
     @NSManaged public var label: String?
     @NSManaged public var value: String?

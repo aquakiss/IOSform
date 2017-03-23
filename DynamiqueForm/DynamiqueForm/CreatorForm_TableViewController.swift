@@ -11,6 +11,8 @@ import CoreData
 
 class CreatorForm_TableViewController: UITableViewController {
     
+    let appDel = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +22,6 @@ class CreatorForm_TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        guard let appDel = UIApplication.shared.delegate as? AppDelegate else { return }
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,10 +60,17 @@ class CreatorForm_TableViewController: UITableViewController {
     @IBAction func Savethisform(_ sender: AnyObject) {
         print("---------------------------------------------------------------------------------")
         
+         let context = appDel.persistentContainer.viewContext
+        
+        let form = Form(context: context)
+        form.nom = "FormulaireTest"
         for (cellkey ,cellvalu) in arrayCell {
            
+                let champ = Champ(context: context)
                 print(" \(cellkey) : \(cellvalu.fieldText.text)")
-
+                champ.label = cellvalu.fieldText.text
+                champ.formC = form
+                champ.value = ""
         }
         print("---------------------------------------------------------------------------------")
         
