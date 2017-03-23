@@ -29,7 +29,7 @@ class CreatorForm_TableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    var arrayCell: [Int: PrototypeTableViewCell] = [:]
+    var arrayCell: [Int : PrototypeTableViewCell] = [:]
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -44,24 +44,25 @@ class CreatorForm_TableViewController: UITableViewController {
     
     @IBAction func insertItem(_ sender: AnyObject) {
         tableView.beginUpdates()
-        let cell = PrototypeTableViewCell()
-        arrayCell[arrayCell.count+1] = cell
+        arrayCell[arrayCell.count+1] = PrototypeTableViewCell();
         tableView.insertRows(at: [IndexPath(row: arrayCell.count-1, section: 0)], with: .automatic)
         tableView.endUpdates()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCell", for: indexPath) as! PrototypeTableViewCell
-
+        arrayCell[arrayCell.count] = cell;
+        
         return cell
     }
     
     @IBAction func Savethisform(_ sender: AnyObject) {
         print("---------------------------------------------------------------------------------")
-        for (cellkey , cellvalu) in arrayCell {
-            if(cellvalu.fieldText.text != nil){
-                print("\(cellkey): \(cellvalu.fieldText.text)")
-            }
+        
+        for (cellkey ,cellvalu) in arrayCell {
+           
+                print(" \(cellkey) : \(cellvalu.fieldText.text)")
+
         }
         print("---------------------------------------------------------------------------------")
         

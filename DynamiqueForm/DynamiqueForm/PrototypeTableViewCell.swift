@@ -27,6 +27,10 @@ class PrototypeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    public func getValue() -> String {
+        return self.fieldText.text!;
+    }
 }
 
 extension PrototypeTableViewCell: UIPickerViewDataSource, UIPickerViewDelegate {
