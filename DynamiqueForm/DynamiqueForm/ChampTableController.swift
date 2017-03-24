@@ -14,8 +14,6 @@ class ChampTableController: UITableViewController {
     var champs = [Champ]()
     let appDel = UIApplication.shared.delegate as! AppDelegate
     
-    @IBOutlet weak var titreView: UINavigationItem!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -56,8 +54,6 @@ class ChampTableController: UITableViewController {
         return cell
     }
 
-    @IBAction func saveChamp(_ sender: AnyObject) {
-    }
     
     /*
     // Override to support conditional editing of the table view.
