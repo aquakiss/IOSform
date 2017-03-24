@@ -164,7 +164,7 @@
             </objects>
             <point key="canvasLocation" x="118" y="883"/>
         </scene>
-        <!--Champ Table Controller-->
+        <!--title-->
         <scene sceneID="O3y-0X-H9V">
             <objects>
                 <tableViewController id="As1-eU-jb7" customClass="ChampTableController" customModule="DynamiqueForm" customModuleProvider="target" sceneMemberID="viewController">
@@ -207,6 +207,21 @@
                             <outlet property="delegate" destination="As1-eU-jb7" id="rhE-9N-2lL"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="title" id="0Qu-81-vJk">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="VQf-fr-cOi">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dhQ-Jq-PPW">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sauvegarde"/>
+                                <connections>
+                                    <action selector="saveChamp:" destination="As1-eU-jb7" eventType="touchUpInside" id="oHG-xU-jCj"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="title" destination="0Qu-81-vJk" id="fXS-Sz-Gpw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6M-8B-6o5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
