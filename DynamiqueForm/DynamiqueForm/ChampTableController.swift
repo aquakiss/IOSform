@@ -1,18 +1,17 @@
 //
-//  FormTableController.swift
+//  ChampTableController.swift
 //  DynamiqueForm
 //
-//  Created by Developer on 23/03/2017.
+//  Created by Developer on 24/03/2017.
 //  Copyright © 2017 Developer. All rights reserved.
 //
 
 import UIKit
-import CoreData
 
-class FormTableController: UITableViewController {
+class ChampTableController: UITableViewController {
 
     var arrayCell: [Int : UITableViewCell] = [:]
-    var forms = [Form]()
+    var champs = [Champ]()
     let appDel = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
@@ -23,17 +22,12 @@ class FormTableController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        let context = appDel.persistentContainer.viewContext
-        
-        
-        let fetchRequest: NSFetchRequest<Form> = Form.fetchRequest()
-        forms = try! context.fetch(fetchRequest)
-        for index in 0...forms.count {
+
+        for index in 0...champs.count {
             arrayCell[index] = basicViewCell()
         }
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,14 +42,14 @@ class FormTableController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return forms.count
+        return champs.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "basicViewCell", for: indexPath) as! basicViewCell
-        
-        cell.title.text = forms[indexPath.row].nom
-        print(indexPath.row)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "champCell", for: indexPath) as! ChampViewCell
+
+        cell.label.text = champs[indexPath.row].label
+        cell.textField.text = champs[indexPath.row].value
 
         return cell
     }
@@ -95,24 +89,14 @@ class FormTableController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let nextViewController = segue.destination as! ChampTableController
-        
-        let cell : UITableViewCell = sender as! UITableViewCell
-        let index = tableView.indexPath(for: cell)
-        print(index)
-        
-        let form : Form = forms[index!.row]
-        
-        nextViewController.champs = form.champF?.allObjects as! [Champ]
-        
     }
- 
+    */
 
 }
