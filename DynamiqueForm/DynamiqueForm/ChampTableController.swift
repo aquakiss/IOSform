@@ -10,7 +10,7 @@ import UIKit
 
 class ChampTableController: UITableViewController {
 
-    var arrayCell: [Int : UITableViewCell] = [:]
+    var arrayCell: [Int : ChampViewCell] = [:]
     var champs = [Champ]()
     let appDel = UIApplication.shared.delegate as! AppDelegate
     
@@ -22,10 +22,6 @@ class ChampTableController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-
-        for index in 0...champs.count {
-            arrayCell[index] = basicViewCell()
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,9 +47,22 @@ class ChampTableController: UITableViewController {
         cell.label.text = champs[indexPath.row].label
         cell.textField.text = champs[indexPath.row].value
 
+        arrayCell[arrayCell.count] = cell
+        
         return cell
     }
 
+    @IBAction func updateForm(_ sender: AnyObject) {
+        let context = appDel.persistentContainer.viewContext
+
+        for (cellkey ,cellvalu) in self.arrayCell {
+            print(" \(cellkey) : \(cellvalu.label.text) \(cellvalu.textField.text)")
+            champs[cellkey].value = cellvalu.textField.text
+            print(champs[cellkey])
+        }
+        
+        try? context.save()
+    }
     
     /*
     // Override to support conditional editing of the table view.

@@ -136,11 +136,11 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wYd-Wn-TYN" id="GDi-YL-CzB">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4CG-m0-LVL">
-                                            <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -208,7 +208,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="LZQ-JK-Toj">
-                        <barButtonItem key="rightBarButtonItem" title="Sauvegarde" id="5M4-zk-aCR"/>
+                        <barButtonItem key="rightBarButtonItem" title="Sauvegarde" id="5M4-zk-aCR">
+                            <connections>
+                                <action selector="updateForm:" destination="As1-eU-jb7" id="luE-Iw-WP1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6M-8B-6o5" userLabel="First Responder" sceneMemberID="firstResponder"/>
