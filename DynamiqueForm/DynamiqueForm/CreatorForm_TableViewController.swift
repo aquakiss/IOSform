@@ -66,18 +66,18 @@ class CreatorForm_TableViewController: UITableViewController {
     
     @IBAction func Savethisform(_ sender: AnyObject) {
         
+
         let alertController = UIAlertController(title: "Message", message: "Enter a name for your form", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){
             _ in print("exit pop up")
         }
+        let context = appDel.persistentContainer.viewContext
         
         loginAction = UIAlertAction(title: "Save", style: .default) { [weak alertController] _ in
              if let alertController = alertController {
                 let loginTextField = alertController.textFields![0] as UITextField
                 
                 print(loginTextField.text)
-              
-                let context = self.appDel.persistentContainer.viewContext
                 
                 let form = Form(context: context)
                 form.nom = loginTextField.text
@@ -93,6 +93,8 @@ class CreatorForm_TableViewController: UITableViewController {
                 // rendre tableView vide
                 self.arrayCell.removeAll()
                 self.tableView.reloadData()
+                
+                try? context.save()
             }
             
         }
