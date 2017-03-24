@@ -89,19 +89,16 @@ class CreatorForm_TableViewController: UITableViewController {
                     champ.formC = form
                     champ.value = ""
                 }
-
+                try? context.save()
                 // rendre tableView vide
                 self.arrayCell.removeAll()
                 self.tableView.reloadData()
                 
-                try? context.save()
             }
             
         }
         
         loginAction?.isEnabled = false
-        
-
         
         alertController.addTextField { (setNametextField) in
             print("coucou")
