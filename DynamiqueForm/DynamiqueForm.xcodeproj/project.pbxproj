@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0088421E8417CF002013E5 /* Champ+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B00883C1E8417CF002013E5 /* Champ+CoreDataClass.swift */; };
+		8B0088431E8417CF002013E5 /* Champ+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B00883D1E8417CF002013E5 /* Champ+CoreDataProperties.swift */; };
+		8B0088441E8417CF002013E5 /* Type+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B00883E1E8417CF002013E5 /* Type+CoreDataClass.swift */; };
+		8B0088451E8417CF002013E5 /* Type+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B00883F1E8417CF002013E5 /* Type+CoreDataProperties.swift */; };
+		8B0088461E8417CF002013E5 /* Form+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0088401E8417CF002013E5 /* Form+CoreDataClass.swift */; };
+		8B0088471E8417CF002013E5 /* Form+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0088411E8417CF002013E5 /* Form+CoreDataProperties.swift */; };
 		8B40B8661E7C217F00F830F6 /* PrototypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B40B8651E7C217F00F830F6 /* PrototypeTableViewCell.swift */; };
-		8B9A7C771E83DDAC00FF9E3F /* Type+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9A7C711E83DDAC00FF9E3F /* Type+CoreDataClass.swift */; };
-		8B9A7C781E83DDAC00FF9E3F /* Type+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9A7C721E83DDAC00FF9E3F /* Type+CoreDataProperties.swift */; };
-		8B9A7C791E83DDAC00FF9E3F /* Champ+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9A7C731E83DDAC00FF9E3F /* Champ+CoreDataClass.swift */; };
-		8B9A7C7A1E83DDAC00FF9E3F /* Champ+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9A7C741E83DDAC00FF9E3F /* Champ+CoreDataProperties.swift */; };
-		8B9A7C7B1E83DDAC00FF9E3F /* Form+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9A7C751E83DDAC00FF9E3F /* Form+CoreDataClass.swift */; };
-		8B9A7C7C1E83DDAC00FF9E3F /* Form+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9A7C761E83DDAC00FF9E3F /* Form+CoreDataProperties.swift */; };
 		8BB521311E7BE04D00E2D9C0 /* CreatorForm_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB521301E7BE04D00E2D9C0 /* CreatorForm_TableViewController.swift */; };
 		8BFEE6121E7ACCDB00259EFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFEE6111E7ACCDB00259EFE /* AppDelegate.swift */; };
 		8BFEE6141E7ACCDB00259EFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFEE6131E7ACCDB00259EFE /* ViewController.swift */; };
@@ -24,13 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B00883C1E8417CF002013E5 /* Champ+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Champ+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8B00883D1E8417CF002013E5 /* Champ+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Champ+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8B00883E1E8417CF002013E5 /* Type+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Type+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8B00883F1E8417CF002013E5 /* Type+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Type+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8B0088401E8417CF002013E5 /* Form+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Form+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8B0088411E8417CF002013E5 /* Form+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Form+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8B40B8651E7C217F00F830F6 /* PrototypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrototypeTableViewCell.swift; sourceTree = "<group>"; };
-		8B9A7C711E83DDAC00FF9E3F /* Type+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Type+CoreDataClass.swift"; path = "../Type+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8B9A7C721E83DDAC00FF9E3F /* Type+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Type+CoreDataProperties.swift"; path = "../Type+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8B9A7C731E83DDAC00FF9E3F /* Champ+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Champ+CoreDataClass.swift"; path = "../Champ+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8B9A7C741E83DDAC00FF9E3F /* Champ+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Champ+CoreDataProperties.swift"; path = "../Champ+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8B9A7C751E83DDAC00FF9E3F /* Form+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Form+CoreDataClass.swift"; path = "../Form+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8B9A7C761E83DDAC00FF9E3F /* Form+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Form+CoreDataProperties.swift"; path = "../Form+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8BB521301E7BE04D00E2D9C0 /* CreatorForm_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorForm_TableViewController.swift; sourceTree = "<group>"; };
 		8BFEE60E1E7ACCDA00259EFE /* DynamiqueForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamiqueForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFEE6111E7ACCDB00259EFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +72,12 @@
 		8BFEE6101E7ACCDB00259EFE /* DynamiqueForm */ = {
 			isa = PBXGroup;
 			children = (
+				8B00883C1E8417CF002013E5 /* Champ+CoreDataClass.swift */,
+				8B00883D1E8417CF002013E5 /* Champ+CoreDataProperties.swift */,
+				8B00883E1E8417CF002013E5 /* Type+CoreDataClass.swift */,
+				8B00883F1E8417CF002013E5 /* Type+CoreDataProperties.swift */,
+				8B0088401E8417CF002013E5 /* Form+CoreDataClass.swift */,
+				8B0088411E8417CF002013E5 /* Form+CoreDataProperties.swift */,
 				8BFEE6111E7ACCDB00259EFE /* AppDelegate.swift */,
 				8BFEE6131E7ACCDB00259EFE /* ViewController.swift */,
 				8BFEE6151E7ACCDB00259EFE /* Main.storyboard */,
@@ -81,12 +87,6 @@
 				8BFEE61D1E7ACCDB00259EFE /* LaunchScreen.storyboard */,
 				8BFEE6201E7ACCDB00259EFE /* Info.plist */,
 				8BFEE6181E7ACCDB00259EFE /* DynamiqueForm.xcdatamodeld */,
-				8B9A7C711E83DDAC00FF9E3F /* Type+CoreDataClass.swift */,
-				8B9A7C721E83DDAC00FF9E3F /* Type+CoreDataProperties.swift */,
-				8B9A7C731E83DDAC00FF9E3F /* Champ+CoreDataClass.swift */,
-				8B9A7C741E83DDAC00FF9E3F /* Champ+CoreDataProperties.swift */,
-				8B9A7C751E83DDAC00FF9E3F /* Form+CoreDataClass.swift */,
-				8B9A7C761E83DDAC00FF9E3F /* Form+CoreDataProperties.swift */,
 			);
 			path = DynamiqueForm;
 			sourceTree = "<group>";
@@ -164,16 +164,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BFEE6141E7ACCDB00259EFE /* ViewController.swift in Sources */,
-				8B9A7C791E83DDAC00FF9E3F /* Champ+CoreDataClass.swift in Sources */,
-				8B9A7C7C1E83DDAC00FF9E3F /* Form+CoreDataProperties.swift in Sources */,
+				8B0088441E8417CF002013E5 /* Type+CoreDataClass.swift in Sources */,
+				8B0088471E8417CF002013E5 /* Form+CoreDataProperties.swift in Sources */,
+				8B0088421E8417CF002013E5 /* Champ+CoreDataClass.swift in Sources */,
+				8B0088451E8417CF002013E5 /* Type+CoreDataProperties.swift in Sources */,
 				8BFEE6121E7ACCDB00259EFE /* AppDelegate.swift in Sources */,
 				8BB521311E7BE04D00E2D9C0 /* CreatorForm_TableViewController.swift in Sources */,
 				8BFEE61A1E7ACCDB00259EFE /* DynamiqueForm.xcdatamodeld in Sources */,
+				8B0088461E8417CF002013E5 /* Form+CoreDataClass.swift in Sources */,
+				8B0088431E8417CF002013E5 /* Champ+CoreDataProperties.swift in Sources */,
 				8B40B8661E7C217F00F830F6 /* PrototypeTableViewCell.swift in Sources */,
-				8B9A7C781E83DDAC00FF9E3F /* Type+CoreDataProperties.swift in Sources */,
-				8B9A7C7B1E83DDAC00FF9E3F /* Form+CoreDataClass.swift in Sources */,
-				8B9A7C7A1E83DDAC00FF9E3F /* Champ+CoreDataProperties.swift in Sources */,
-				8B9A7C771E83DDAC00FF9E3F /* Type+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,7 +31,14 @@ class CreatorForm_TableViewController: UITableViewController {
 
     // MARK: - Table view data source
     var arrayCell: [Int : PrototypeTableViewCell] = [:]
-
+    var oklogin : Bool = false {
+        didSet {
+            loginAction?.isEnabled = oklogin
+        }
+    }
+    
+    var loginAction: UIAlertAction?
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -58,28 +65,61 @@ class CreatorForm_TableViewController: UITableViewController {
     }
     
     @IBAction func Savethisform(_ sender: AnyObject) {
-        print("---------------------------------------------------------------------------------")
         
-         let context = appDel.persistentContainer.viewContext
-        
-        let form = Form(context: context)
-        form.nom = "FormulaireTest"
-        for (cellkey ,cellvalu) in arrayCell {
-           
-                let champ = Champ(context: context)
-                print(" \(cellkey) : \(cellvalu.fieldText.text)")
-                champ.label = cellvalu.fieldText.text
-                champ.formC = form
-                champ.value = ""
-        }
-        print("---------------------------------------------------------------------------------")
-        
-        let alertController = UIAlertController(title: "Message", message: " \(arrayCell.count):", preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Exit", style: .cancel){
+        let alertController = UIAlertController(title: "Message", message: "Enter a name for your form", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){
             _ in print("exit pop up")
         }
+        
+        loginAction = UIAlertAction(title: "Save", style: .default) { [weak alertController] _ in
+             if let alertController = alertController {
+                let loginTextField = alertController.textFields![0] as UITextField
+                
+                print(loginTextField.text)
+              
+                let context = self.appDel.persistentContainer.viewContext
+                
+                let form = Form(context: context)
+                form.nom = loginTextField.text
+                for (cellkey ,cellvalu) in self.arrayCell {
+                    
+                    let champ = Champ(context: context)
+                    print(" \(cellkey) : \(cellvalu.fieldText.text)")
+                    champ.label = cellvalu.fieldText.text
+                    champ.formC = form
+                    champ.value = ""
+                }
+
+                // rendre tableView vide
+                self.arrayCell.removeAll()
+                self.tableView.reloadData()
+            }
+            
+        }
+        
+        loginAction?.isEnabled = false
+        
+
+        
+        alertController.addTextField { (setNametextField) in
+            print("coucou")
+            setNametextField.placeholder = "mini 4 characters"
+            setNametextField.addTarget(self, action: #selector(self.tfDidChange), for: .editingChanged)
+        }
         alertController.addAction(cancelAction)
+        alertController.addAction(loginAction!)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func tfDidChange(_ sender: UITextField) {
+        if (sender.text!.characters.count >= 4) {
+            print(sender.text!.characters.count)
+            oklogin = true
+        }
+        else{
+            oklogin = false
+        }
+        
     }
     /*
     // Override to support conditional editing of the table view.
