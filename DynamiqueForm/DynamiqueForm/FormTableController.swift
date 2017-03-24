@@ -95,7 +95,6 @@ class FormTableController: UITableViewController {
     }
     */
 
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -111,7 +110,7 @@ class FormTableController: UITableViewController {
         let form : Form = forms[index!.row]
         
         nextViewController.champs = form.champF?.allObjects as! [Champ]
-        
+        nextViewController.title = form.nom
     }
  
 
