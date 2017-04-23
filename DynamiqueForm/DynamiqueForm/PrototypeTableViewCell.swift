@@ -13,7 +13,8 @@ class PrototypeTableViewCell: UITableViewCell {
     @IBOutlet weak var fieldText: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
     
-    var typeChamp: [String] = ["Texte", "Numero", "Liste"]
+    public var selectedValue = "Texte"
+    var typeChamp: [String] = ["Texte", "Numero"/*, "Liste"*/]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,4 +44,10 @@ extension PrototypeTableViewCell: UIPickerViewDataSource, UIPickerViewDelegate {
         return typeChamp[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        selectedValue = typeChamp[row]
+        // use the row to get the selected row from the picker view
+        // using the row extract the value from your datasource (array[row])
+    }
 }

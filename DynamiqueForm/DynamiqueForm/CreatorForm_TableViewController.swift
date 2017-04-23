@@ -85,7 +85,11 @@ class CreatorForm_TableViewController: UITableViewController {
                     
                     let champ = Champ(context: context)
                     print(" \(cellkey) : \(cellvalu.fieldText.text)")
+                    let type = Type(context: context)
+                    print(cellvalu.selectedValue)
+                    type.label = cellvalu.selectedValue
                     champ.label = cellvalu.fieldText.text
+                    champ.typeC = type
                     champ.formC = form
                     champ.value = ""
                 }

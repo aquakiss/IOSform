@@ -42,14 +42,30 @@ class ChampTableController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "champCell", for: indexPath) as! ChampViewCell
+        if (champs[indexPath.row].typeC?.label == "Numero") {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "champCellNumber", for: indexPath) as! ChampViewCell
+            print("test number")
+            
+            cell.label.text = champs[indexPath.row].label
+            cell.textField.text = champs[indexPath.row].value
+            
+            arrayCell[arrayCell.count] = cell
+            
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "champCell", for: indexPath) as! ChampViewCell
+            
+            print("test text")
+            
+            cell.label.text = champs[indexPath.row].label
+            cell.textField.text = champs[indexPath.row].value
+            
+            arrayCell[arrayCell.count] = cell
+            
+            return cell
+        }
 
-        cell.label.text = champs[indexPath.row].label
-        cell.textField.text = champs[indexPath.row].value
-
-        arrayCell[arrayCell.count] = cell
         
-        return cell
     }
 
     @IBAction func updateForm(_ sender: AnyObject) {
